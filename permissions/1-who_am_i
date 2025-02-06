@@ -1,0 +1,3 @@
+#!/bin/bash
+#Print the username of the user
+whoami
