@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Read the /etc/passwd file line by line
 
-# Read /etc/passwd line by line
 while IFS=: read -r username password uid gid gecos home shell; do
-    echo "The user $username is part of the $gid gang, lives in $home and rides $shell. USER ID's place is protected by the passcode $password, more info about the user here: $gecos"
+    # Format and display the story for each user
+    echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $uid's place is protected by the passcode $password, more info about the user here: $gecos"
 done < /etc/passwd
