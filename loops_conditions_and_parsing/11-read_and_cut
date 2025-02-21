@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Read /etc/passwd line by line
+while IFS=: read -r username password uid gid gecos home shell; do
+    echo "Username: $username, UID: $uid, Home Directory: $home"
+done < /etc/passwd
